@@ -80,6 +80,36 @@ Default = <string> - The default value of the textbox.
 TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
 Callback = <function> - The function of the textbox.
 ]]
+})
+
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+    Name = "AutoFarm 🚜",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+Tab:AddParagraph("Autofarm Source 🧑‍🌾")
+Tab:AddButton({
+    Name = "Click To Load AutoFarm Source 🚜",
+    Callback = function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/JulHubz/JulHub/main/JulHub"))()
+      end    
+})
 
 Tab:AddToggle({
     Name = "🧊Freeze Trade",
@@ -174,29 +204,6 @@ Tab:AddButton({
 })
 
 Tab:AddParagraph("ACTIVATED❗","Script Activated Timer 0:00")
-
-local Tab = Window:MakeTab({
-    Name = "AutoFarm 🚜",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-Tab:AddParagraph("Autofarm Source 🧑‍🌾","With Updated Features Autofarm Pony-Minigame And Bullride-Minigame Also With Petfarms And Baby Farms")
-Tab:AddButton({
-    Name = "Click To Load AutoFarm Source 🚜",
-    Callback = function()
-              loadstring(game:HttpGet("https://raw.githubusercontent.com/JulHubz/JulHub/main/JulHub"))()
-      end    
-})
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
 
 --[[
 Name = <string> - The name of the button.
